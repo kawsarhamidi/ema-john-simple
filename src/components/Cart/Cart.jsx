@@ -4,12 +4,11 @@ import './Cart.css';
 const Cart = ({cart}) => {
     // const cart = props.cart; //option 1
     // const { cart} = props; // option 2
-
-
-    console.log(cart);
+// console.log(cart);
     let totalPrice = 0;
     let totalShipping = 0;
-    for (const product in cart) {
+    for (const product of cart) {
+        // console.log(product.price);
         totalPrice += product.price;
         totalShipping += product.shipping;
     }
