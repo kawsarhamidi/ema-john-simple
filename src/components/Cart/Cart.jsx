@@ -24,6 +24,7 @@ const Cart = ({cart}) => {
         <div className='cart'>
             <h4>Order Summary</h4>
             <p>Selected Item: {quantity}</p>
+            <h5>Name: {cart.map((pd, idx)=><p>{pd.name} key={pd.idx}</p>)}</h5>
             <p>Total Price: ${totalPrice}</p>
             <p>Shipping: ${totalShipping}</p>
             <p>Tax: ${tax.toFixed(2)}</p>
